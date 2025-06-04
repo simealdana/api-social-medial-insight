@@ -57,6 +57,20 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Database configuration (Supabase)
+
+This project uses [Supabase](https://supabase.com/) as the PostgreSQL database.
+Install the `@supabase/supabase-js` library and provide the following
+environment variables (see `.env.example`):
+
+```bash
+SUPABASE_URL=<your-supabase-url>
+SUPABASE_ANON_KEY=<your-supabase-key>
+```
+
+After configuring the environment variables, run the SQL script in
+`db/init.sql` using the Supabase SQL editor to create the initial tables.
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
